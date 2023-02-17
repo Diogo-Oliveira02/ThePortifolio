@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@yield('title')</title>
+    <!-- font icons -->
+    <link rel="stylesheet" href="{{asset('assets/fonts-icons/css/themify-icons.css')}}">
+    <!-- Bootstrap + Meyawo main styles -->
+    <link rel="stylesheet" href="{{asset('assets/css/meyawo.css')}}">
+</head>
+<body>
+    @yield('content')
+
+    <!-- core  -->
+    <script src="{{asset('assets/js/jquery/jquery-3.4.1.js')}}"></script>
+    <script src="{{asset('assets/js/bootstrap/bootstrap.bundle.js')}}"></script>
+
+    <!-- bootstrap 3 affix -->
+    <script src="{{asset('assets/js/bootstrap/bootstrap.affix.js')}}"></script>
+
+    <!-- Meyawo js -->
+    <script src="{{asset('assets/js/meyawo.js')}}"></script>
+</body>
+</html>
