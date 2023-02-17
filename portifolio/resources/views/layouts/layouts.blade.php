@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@yield('title')</title>
     <!-- font icons -->
-    <link rel="stylesheet" href="{{asset('assets/fonts-icons/css/themify-icons.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/fonts-icons/themify-icons/css/themify-icons.css')}}">
     <!-- Bootstrap + Meyawo main styles -->
     <link rel="stylesheet" href="{{asset('assets/css/meyawo.css')}}">
 </head>
