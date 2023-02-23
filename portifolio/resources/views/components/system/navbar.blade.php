@@ -19,7 +19,7 @@
                     <a class="link" href="#contact">Contact</a>
                 </li>
                 <li class="item ml-md-3">
-                    <a href="{{ route('login') }}" class="btn btn-primary"></a>
+                    <a href="{{ route('login') }}" class="btn btn-primary">Login</a>
                 </li>
             </ul>
             <a href="javascript:void(0)" id="nav-toggle" class="hamburger hamburger--elastic">
