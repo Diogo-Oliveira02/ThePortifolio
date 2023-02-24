@@ -1,9 +1,8 @@
-<div class="justfy-content-center align-items-center row">
-    <div class="col-md-6 align-self-center text-center">
-        <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-        </form>
-    </div>
-</div>
-    
+<form class="form-inline justify-content-center">
+    <div class="input-group mb-3">
+        <input type="text" class="form-control" size="40" placeholder="search" aria-label="search" aria-describedby="button-addon2">
+        <div class="input-group-append">
+            <button class="btn btn-outline-success" type="button" id="button-addon2">Search</button>
+        </div>
+    </div> 
+</form> 
