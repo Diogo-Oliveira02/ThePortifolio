@@ -14,6 +14,14 @@
     @else
     @endif
     
+    @if(isset($msg))
+        <div class="alert alert-success text-center" role="alert">
+            {{$msg}}
+        </div>
+    @else
+
+    @endif
+
     <x-dashboard.about-modal/>
     <x-dashboard.portifolio-modal/>
     <x-dashboard.service-modal/>
