@@ -1,4 +1,4 @@
-<form class="form-inline justify-content-center">
+<form class="form-inline mt-3 justify-content-center">
     <div class="input-group mb-3">
         <input type="text" class="form-control" size="40" placeholder="search" aria-label="search" aria-describedby="button-addon2">
         <div class="input-group-append">
