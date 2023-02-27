@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\PortifolioController;
+use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -33,5 +34,7 @@ Route::middleware('auth')->group(function () {
 Route::post('/add/about', [AboutController::class, 'create'])->middleware(['auth', 'verified']);
 
 Route::post('/add/portifolio', [PortifolioController::class, 'create'])->middleware(['auth', 'verified']);
+
+Route::post('/add/service', [ServiceController::class, 'create'])->middleware(['auth', 'verified']);
 
 require __DIR__.'/auth.php';
