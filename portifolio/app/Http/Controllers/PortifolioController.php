@@ -23,20 +23,20 @@ class PortifolioController extends Controller
         $db = new Portifolio;
         $db->title = $request->title;
         $db->description = $request->description;
-        $db->patch = $nameStore;
+        $db->patch = 'senai/' . $nameStore;
         $db->url = $request->url;
         $db->type = $request->type;
         $db->save();       
         
-        return view('dashboard', ['msg'=>'Item adicionado com sucesso !']);
+        return view('dashboard', ['x'=>"", 'msg'=>'Item adicionado com sucesso !']);
     }
     public function getAllPortifolio()
     {
-        return Portifolio::all();
+        return view('dashboard', ['x'=>"list",'type'=>"portifolio", 'list'=>Portifolio::all()]);
     }
     public function getPortifolio(Request $request) 
     {
-        return Portifolio::find($request->id);
+        return view('editPortifolio',['list'=>Portifolio::find($request->id)]);
     }
     public function updatePortifolio(Request $request) 
     {
@@ -46,6 +46,7 @@ class PortifolioController extends Controller
             $extension = $request->file('imagem')->getClientOriginalExtension();
             $nameStore = $fileName . "_" . time() . "." . $extension;
             $path = $request->file('imagem')->storeAs('public/senai', $nameStore);
+            $nameStore = 'senai/' . $nameStore;
         } else {
             $nameStore = $request->patch;
         }
@@ -57,15 +58,21 @@ class PortifolioController extends Controller
         $db->url = $request->url;
         $db->type = $request->type;
         $db->save();
+
+        return $this->getAllPortifolio();
     }
     public function deletePortifolio(Request $request)
     {
         $db = Portifolio::find($request->id);
         $db->delete();
+
+        return $this->getAllPortifolio();
     }
-    public function search(Request $request)
+    public function searchPortifolio(Request $request)
     {
-        About::where('description', 'LIKE', '%'.$request->search.'%')
+        $db = Portifolio::where('title', 'LIKE', '%'.$request->search.'%')
         ->get();
+
+        return view('dashboard', ['x'=>"list",'type'=>"portifolio", 'list'=> $db]);
     }
 }
