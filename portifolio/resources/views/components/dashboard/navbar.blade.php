@@ -27,7 +27,7 @@
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">Service</a>
                     <ul class="dropdown-menu text-center">
                         <li data-toggle="modal" data-target="#modalService"><a class="dropdown-item" href="#">ADD</a></li>
-                        <li><a class="dropdown-item" href="#">LIST</a></li>
+                        <li><a class="dropdown-item" href="/list/service">LIST</a></li>
                     </ul>
                 </li>
                 <li class="nav-item dropdown">

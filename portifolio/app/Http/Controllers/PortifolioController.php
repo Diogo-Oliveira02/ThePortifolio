@@ -40,6 +40,7 @@ class PortifolioController extends Controller
     }
     public function updatePortifolio(Request $request) 
     {
+
         if ($request->hasFile('imagem')) {
             $fileNameWithExt = $request->file('imagem')->getClientOriginalName();
             $fileName = pathinfo($fileNameWithExt, PATHINFO_FILENAME);

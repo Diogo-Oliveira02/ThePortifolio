@@ -3,6 +3,8 @@
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\PortifolioController;
 use App\Http\Controllers\ServiceController;
+use App\Http\Controllers\SignatureController;
+
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -51,5 +53,12 @@ Route::post('/editar/service',   [ServiceController::class, 'getService'])->midd
 Route::post('/update/service',   [ServiceController::class, 'updateService'])->middleware(['auth', 'verified']);
 Route::post('/deletar/service',  [ServiceController::class, 'deleteService'])->middleware(['auth', 'verified']);
 Route::post('/search/service',   [ServiceController::class, 'searchService'])->middleware(['auth', 'verified']);
+
+Route::post('/add/signature',      [SignatureController::class, 'create'])->middleware(['auth', 'verified']);
+Route::get('/list/signature',      [SignatureController::class, 'getAllSignature'])->middleware(['auth', 'verified']);
+Route::post('/editar/signature',   [SignatureController::class, 'getSignature'])->middleware(['auth', 'verified']);
+Route::post('/update/signature',   [SignatureController::class, 'updateSignature'])->middleware(['auth', 'verified']);
+Route::post('/deletar/signature',  [SignatureController::class, 'deleteSignature'])->middleware(['auth', 'verified']);
+Route::post('/search/signature',   [SignatureController::class, 'searchSignature'])->middleware(['auth', 'verified']);
 
 require __DIR__.'/auth.php';

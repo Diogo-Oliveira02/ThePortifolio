@@ -11,21 +11,23 @@
     <div class="container-fluid mt-5">
         <div class="row">
             @foreach($result as $key)
-                <div class="col-3">
-                    <div class="card" style="width: 18rem;">
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="card" style="width: 16rem;">
                         <div class="card-body">
                             <h5 class="card-title">{{$service}}</h5>
                             <p class="card-text">{{$key->description}}</p>
-                            <form action="/editar/{{$service}}" method="post">
-                                @csrf
-                                <input type="hidden" name="id" value="{{$key->id}}">
-                                <button class="btn btn-warning">Edit</button>
-                            </form>
-                            <form action="/deletar/{{$service}}" method="post">
-                                @csrf
-                                <input type="hidden" name="id" value="{{$key->id}}">
-                                <button type="submit" class="btn btn-danger">Delete</button>
-                            </form>
+                            <div class="d-flex">
+                                <form action="/editar/{{$service}}" method="post">
+                                    @csrf
+                                    <input type="hidden" name="id" value="{{$key->id}}">
+                                    <button class="btn btn-warning">Edit</button>
+                                </form>
+                                <form action="/deletar/{{$service}}" method="post">
+                                    @csrf
+                                    <input type="hidden" name="id" value="{{$key->id}}">
+                                    <button type="submit" class="btn btn-danger ml-2">Delete</button>
+                                </form>
+                            </div>
                         </div>
                     </div>
                 </div>

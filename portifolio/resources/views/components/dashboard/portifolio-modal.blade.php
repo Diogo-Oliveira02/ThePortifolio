@@ -15,6 +15,22 @@
                         <label for="formGroupExampleInput">Titulo</label>
                         <input type="text" class="form-control" name="title" id="formGroupExampleInput" placeholder="Digite um Titulo">
                     </div>
+                    <label for="inputState">Tipo de Serviço</label>
+                    <select  name="type" id="inputState" class="form-control mb-3">
+                        <option selected disabled>escolha...</option>
+                        <option value="sass">SASS</option>
+                        <option value="pass">PASS</option>
+                        <option value="venda">VENDA</option>
+                        <option value="api">API</option>
+                        <option value="suport">SUPORTE</option>
+                    </select>
+                    <label for="basic-url">Digite a URL do site</label>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="basic-addon3">URL</span>
+                        </div>
+                        <input type="text" class="form-control" placeholder="https://example.com/users/" name="url" id="basic-url" aria-describedby="basic-addon3">
+                    </div>
                     <div class="form-group">
                         <label for="exampleFormControlTextarea1">Descrição</label>
                         <textarea class="form-control"  name="description" id="exampleFormControlTextarea1" rows="3"></textarea>
@@ -27,21 +43,7 @@
                             <input type="file"  class="custom-file-input" name="imagem" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01">
                             <label class="custom-file-label" for="inputGroupFile01">Escolha uma imagem</label>
                         </div>
-                    </div>
-                    <label for="basic-url">Digite a URL do site</label>
-                    <div class="input-group mb-3">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text" id="basic-addon3">URL</span>
-                        </div>
-                        <input type="text" class="form-control" placeholder="https://example.com/users/" name="url" id="basic-url" aria-describedby="basic-addon3">
-                    </div>
-                    <label for="inputState">Tipo de Serviço</label>
-                    <select  name="type" id="inputState" class="form-control">
-                        <option selected disabled>escolha...</option>
-                        <option>...</option>
-                        <option>...</option>
-                        <option>...</option>
-                    </select>
+                    </div>   
             </div>
             <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
